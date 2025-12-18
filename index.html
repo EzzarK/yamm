@@ -81,6 +81,243 @@
             transform: translateY(0);
         }
 
+        /* Page 2 Styles */
+        .page2 {
+            display: none;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .message-container {
+            max-width: 800px;
+            margin: 100px auto 50px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        .message-content {
+            font-size: 1.15em;
+            line-height: 1.8;
+            color: #333;
+            text-align: justify;
+        }
+
+        .blurred-text {
+            filter: blur(8px);
+            user-select: none;
+            transition: filter 0.5s ease;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .nav-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 3000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content h3 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .modal-btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .confirm-btn {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .cancel-btn {
+            background: #f44336;
+            color: white;
+        }
+
+        .confirmation-modal .modal-content {
+            max-width: 500px;
+        }
+
+        .confirmation-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        /* Page 3 Styles */
+        .page3 {
+            display: none;
+            width: 100%;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .timer-container {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .timer-title {
+            font-size: 2.5em;
+            color: #764ba2;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .time-unit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            min-width: 120px;
+        }
+
+        .time-value {
+            font-size: 3em;
+            font-weight: bold;
+            color: white;
+            display: block;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .time-label {
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 10px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .timer-back-btn {
+            background: linear-gradient(135deg, #ffb6c1 0%, #ffc0cb 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(255, 182, 193, 0.5);
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .timer-back-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 182, 193, 0.7);
+        }
+
         .start-overlay {
             position: fixed;
             top: 0;
@@ -133,6 +370,25 @@
             font-size: 28px;
             opacity: 0.7;
             animation: fly 15s infinite;
+        }
+
+        .sakura {
+            position: absolute;
+            font-size: 22px;
+            opacity: 0.8;
+            animation: fall linear infinite;
+            z-index: 10;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0.3;
+            }
         }
 
         @keyframes fly {
@@ -189,13 +445,49 @@
             .flower-decoration {
                 font-size: 2em;
             }
+
+            .message-container {
+                margin: 50px 20px;
+                padding: 25px;
+            }
+
+            .message-content {
+                font-size: 1em;
+            }
+
+            .nav-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+
+            .timer-container {
+                margin: 40px 10px;
+                padding: 30px 20px;
+            }
+
+            .timer-title {
+                font-size: 1.8em;
+            }
+
+            .time-unit {
+                padding: 20px;
+                min-width: 100px;
+            }
+
+            .time-value {
+                font-size: 2.2em;
+            }
+
+            .time-label {
+                font-size: 0.85em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="start-overlay" id="startOverlay">
         <div class="start-content">
-            <div class="flower-decoration">🌸 💐 🌸</div>
+            <div class="flower-decoration">🌸 🌷 🌸</div>
             <h2>Haloooo</h2>
             <p>pencet di mana aja</p>
             <div class="flower-decoration">🦋 ✨ 🦋</div>
@@ -216,14 +508,88 @@
             <div class="butterfly" style="left: 15%; top: 50%; animation-delay: 9s; animation-duration: 16s;">🦋</div>
         </div>
 
+        <div class="butterflies" id="sakuraContainer"></div>
+
         <div class="poster-container">
-            <img src="ayam.png" alt="Poster untuk Ayam" id="posterImage">
+            <img src="anjay.png" alt="Poster untuk Ayam" id="posterImage">
         </div>
 
         <div class="music-control">
-            <button class="music-btn" id="musicBtn" onclick="toggleMusic()">
-                ⏸️ Pause Music
+            <button class="music-btn" id="nextPageBtn" onclick="goToPage2()">
+                Halaman Selanjutnya →
             </button>
+        </div>
+    </div>
+
+    <div class="page2" id="page2">
+        <div class="stars" id="starsContainer"></div>
+        
+        <div class="message-container">
+            <div class="message-content">
+                <p>hmmmmm pas itu kamu pernah bilang suruh cari yang lain aja & cari yang pasti, tapi kayaknya gabisa deh, hehehehehehe batu banget sih ni orang soalnyaaa akuu udah all in semua rasa ku ke orang yang lagi baca ini, tapi misal kamu ngerasa keganggu bilang aja aku bakal ngejauh ko, terus kalo kamu tetep kekeh ama pendirian mu gamau pacaran juga gapap itu pilihan mu, bagus malah kokoh pendiriannya, last misal kamu ntar suka sama orang yang baik, pinter, pokonya mantep lah, itu juga gapapa you deserve the best. kayaknya ini pertama kali aku ngomong gini sih, kayaknya kamu bakal ngerasa alay. <span class="blurred-text" id="blurredText">'I love you, I like you, and i'm so lucky and happy to meet you, meeting was the best think happend to me this year, sorry for bothering you and sorry if i'm so annoying. I hope you're doing alright but if you're not, you can always talk to me. btw sering sering senyum kak, makin lucu kamu kalo senyum hehehehehe'</span> dahhh SEMOGA 2026 kamu selalu dikelilingi orang baik n semoga banyak hal baik yang terjadi ke kamu, sorry kalo aku sering bikin hari mu jadi jelek</p>
+            </div>
+            
+            <div class="buttons-container">
+                <button class="nav-btn" onclick="goToPage1()">← Halaman Sebelumnya</button>
+                <button class="nav-btn" onclick="showPasswordModal()">🔓 Buka Pesan</button>
+                <button class="nav-btn" onclick="goToPage3()">Halaman Selanjutnya →</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page3" id="page3">
+        <div class="timer-container">
+            <div class="timer-display">
+                <div class="time-unit">
+                    <span class="time-value" id="years">0</span>
+                    <span class="time-label">Tahun</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="months">0</span>
+                    <span class="time-label">Bulan</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="days">0</span>
+                    <span class="time-label">Hari</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="hours">0</span>
+                    <span class="time-label">Jam</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="minutes">0</span>
+                    <span class="time-label">Menit</span>
+                </div>
+                <div class="time-unit">
+                    <span class="time-value" id="seconds">0</span>
+                    <span class="time-label">Detik</span>
+                </div>
+            </div>
+
+            <p style="font-size: 1.5em; color: #764ba2; margin-top: 30px; font-weight: bold;">hayoo ini timer apa? 🤔</p>
+
+            <button class="timer-back-btn" onclick="goToPage2FromTimer()">← Kembali</button>
+        </div>
+    </div>
+
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
+            <h3>Masukkan Password</h3>
+            <input type="password" id="passwordInput" placeholder="Password...">
+            <div class="modal-buttons">
+                <button class="modal-btn confirm-btn" onclick="checkPassword()">OK</button>
+                <button class="modal-btn cancel-btn" onclick="closePasswordModal()">Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal confirmation-modal" id="confirmationModal">
+        <div class="modal-content">
+            <h3>Yakin atau tidak?</h3>
+            <div class="confirmation-buttons">
+                <button class="modal-btn confirm-btn" onclick="handleYakin()">Yakin</button>
+                <button class="modal-btn cancel-btn" onclick="handleTidak()">Tidak</button>
+            </div>
         </div>
     </div>
 
@@ -234,8 +600,37 @@
     <script>
         const startOverlay = document.getElementById('startOverlay');
         const bgMusic = document.getElementById('bgMusic');
-        const musicBtn = document.getElementById('musicBtn');
         let isPlaying = false;
+
+        // Create sakura petals
+        function createSakura() {
+            const sakuraContainer = document.getElementById('sakuraContainer');
+            for (let i = 0; i < 20; i++) {
+                const sakura = document.createElement('div');
+                sakura.className = 'sakura';
+                sakura.innerHTML = '🌸';
+                sakura.style.left = Math.random() * 100 + '%';
+                sakura.style.animationDuration = (Math.random() * 5 + 8) + 's';
+                sakura.style.animationDelay = Math.random() * 5 + 's';
+                sakuraContainer.appendChild(sakura);
+            }
+        }
+
+        // Create stars
+        function createStars() {
+            const starsContainer = document.getElementById('starsContainer');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.width = (Math.random() * 3 + 1) + 'px';
+                star.style.height = star.style.width;
+                star.style.animationDelay = Math.random() * 2 + 's';
+                star.style.animationDuration = (Math.random() * 2 + 1) + 's';
+                starsContainer.appendChild(star);
+            }
+        }
 
         startOverlay.addEventListener('click', function() {
             startOverlay.style.opacity = '0';
@@ -246,25 +641,107 @@
 
             bgMusic.play().then(() => {
                 isPlaying = true;
-                musicBtn.innerHTML = '⏸️ Pause Music';
             }).catch(error => {
                 console.log('Auto-play prevented:', error);
                 isPlaying = false;
-                musicBtn.innerHTML = '▶️ Play Music';
             });
+
+            createSakura();
         });
 
-        function toggleMusic() {
-            if (isPlaying) {
-                bgMusic.pause();
-                musicBtn.innerHTML = '▶️ Play Music';
-                isPlaying = false;
+        function goToPage2() {
+            document.getElementById('page2').style.display = 'block';
+            createStars();
+        }
+
+        function goToPage1() {
+            document.getElementById('page2').style.display = 'none';
+        }
+
+        function goToPage3() {
+            document.getElementById('page3').style.display = 'block';
+            startTimer();
+        }
+
+        function goToPage2FromTimer() {
+            document.getElementById('page3').style.display = 'none';
+        }
+
+        // Timer functionality
+        let timerInterval;
+        
+        function startTimer() {
+            const startDate = new Date('2025-08-30T10:30:00');
+            
+            function updateTimer() {
+                const now = new Date();
+                const diff = now - startDate;
+                
+                // Calculate time units
+                const seconds = Math.floor(diff / 1000);
+                const minutes = Math.floor(seconds / 60);
+                const hours = Math.floor(minutes / 60);
+                const days = Math.floor(hours / 24);
+                const months = Math.floor(days / 30.44); // Average days per month
+                const years = Math.floor(days / 365.25); // Account for leap years
+                
+                // Calculate remaining values
+                const displayYears = years;
+                const displayMonths = Math.floor((days % 365.25) / 30.44);
+                const displayDays = Math.floor(days % 30.44);
+                const displayHours = hours % 24;
+                const displayMinutes = minutes % 60;
+                const displaySeconds = seconds % 60;
+                
+                // Update display
+                document.getElementById('years').textContent = displayYears;
+                document.getElementById('months').textContent = displayMonths;
+                document.getElementById('days').textContent = displayDays;
+                document.getElementById('hours').textContent = displayHours;
+                document.getElementById('minutes').textContent = displayMinutes;
+                document.getElementById('seconds').textContent = displaySeconds;
+            }
+            
+            updateTimer();
+            if (timerInterval) clearInterval(timerInterval);
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+
+        function showPasswordModal() {
+            document.getElementById('passwordModal').style.display = 'flex';
+        }
+
+        function closePasswordModal() {
+            document.getElementById('passwordModal').style.display = 'none';
+            document.getElementById('passwordInput').value = '';
+        }
+
+        function checkPassword() {
+            const password = document.getElementById('passwordInput').value;
+            if (password === 'ayam gate 2') {
+                closePasswordModal();
+                document.getElementById('confirmationModal').style.display = 'flex';
             } else {
-                bgMusic.play();
-                musicBtn.innerHTML = '⏸️ Pause Music';
-                isPlaying = true;
+                alert('Password salah!');
+                document.getElementById('passwordInput').value = '';
             }
         }
+
+        function handleYakin() {
+            document.getElementById('blurredText').classList.remove('blurred-text');
+            document.getElementById('confirmationModal').style.display = 'none';
+        }
+
+        function handleTidak() {
+            document.getElementById('confirmationModal').style.display = 'none';
+        }
+
+        // Allow Enter key to submit password
+        document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                checkPassword();
+            }
+        });
     </script>
 </body>
 </html>
