@@ -526,7 +526,7 @@
         
         <div class="message-container">
             <div class="message-content">
-                <p>hmmmmm pas itu kamu pernah bilang suruh cari yang lain aja & cari yang pasti, tapi kayaknya gabisa deh, hehehehehehe batu banget sih ni orang soalnyaaa akuu udah all in semua rasa ku ke orang yang lagi baca ini, tapi misal kamu ngerasa keganggu bilang aja aku bakal ngejauh ko, terus kalo kamu tetep kekeh ama pendirian mu gamau pacaran juga gapap itu pilihan mu, bagus malah kokoh pendiriannya, last misal kamu ntar suka sama orang yang baik, pinter, pokonya mantep lah, itu juga gapapa you deserve the best. kayaknya ini pertama kali aku ngomong gini sih, kayaknya kamu bakal ngerasa alay. <span class="blurred-text" id="blurredText">'I love you, I like you, and i'm so lucky and happy to meet you, meeting was the best think happend to me this year, sorry for bothering you and sorry if i'm so annoying. I hope you're doing alright but if you're not, you can always talk to me. btw sering sering senyum kak, makin lucu kamu kalo senyum hehehehehe'</span> dahhh SEMOGA 2026 kamu selalu dikelilingi orang baik n semoga banyak hal baik yang terjadi ke kamu, sorry kalo aku sering bikin hari mu jadi jelek</p>
+                <p>hai, gatau kenapa akhir akhir ini aku ngerasa takut nge ganggu kamu, jadinya jarang nge chat kamu aku juga ngerasa kamu kaya lagi males, ya kayaknya perasaan ku doang, oiya pas itu kamu pernah bilang suruh cari yang lain aja & cari yang pasti, tapi kayaknya gabisa deh, hehehehehehe batu banget sih ni orang soalnyaaa akuu udah all in semua rasa ku ke orang yang lagi baca ini, tapi misal kamu ngerasa keganggu bilang aja aku bakal ngejauh ko, terus kalo kamu tetep kekeh ama pendirian mu gamau pacaran juga gapap itu pilihan mu, bagus malah kokoh pendiriannya, last misal kamu ntar suka sama orang yang baik, pinter, pokonya mantep lah, itu juga gapapa you deserve the best. kayaknya ini pertama kali aku ngomong gini sih, kayaknya kamu bakal ngerasa alay. <span class="blurred-text" id="blurredText">'I love you, I like you, and i'm so lucky and happy to meet you, meeting was the best think happend to me this year, sorry for bothering you and sorry if i'm so annoying. I hope you're doing alright but if you're not, you can always talk to me. btw sering sering senyum kak, makin lucu kamu kalo senyum hehehehehe'</span> dahhh SEMOGA 2026 kamu selalu dikelilingi orang baik n semoga banyak hal baik yang terjadi ke kamu, sorry kalo aku sering bikin hari mu jadi jelek</p>
             </div>
             
             <div class="buttons-container">
@@ -706,16 +706,13 @@
             if (timerInterval) clearInterval(timerInterval);
             timerInterval = setInterval(updateTimer, 1000);
         }
-
         function showPasswordModal() {
             document.getElementById('passwordModal').style.display = 'flex';
         }
-
         function closePasswordModal() {
             document.getElementById('passwordModal').style.display = 'none';
             document.getElementById('passwordInput').value = '';
         }
-
         function checkPassword() {
             const password = document.getElementById('passwordInput').value;
             if (password === 'ayam gate 2') {
@@ -726,16 +723,13 @@
                 document.getElementById('passwordInput').value = '';
             }
         }
-
         function handleYakin() {
             document.getElementById('blurredText').classList.remove('blurred-text');
             document.getElementById('confirmationModal').style.display = 'none';
         }
-
         function handleTidak() {
             document.getElementById('confirmationModal').style.display = 'none';
         }
-
         // Allow Enter key to submit password
         document.getElementById('passwordInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
